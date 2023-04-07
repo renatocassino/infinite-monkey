@@ -16,6 +16,7 @@ fn main() {
 
     for i in 0..cpus {
         thread::spawn(move|| {
+            println!("Thread {} started", i);
             let mut words_hash_map = HashMap::new();
             if let Ok(lines) = read_lines("./br-sem-acentos.txt") {
                 for line in lines {
@@ -49,8 +50,9 @@ fn main() {
                         }
                     }
                 }
-            }
 
+                println!("Thread {} finished", i);
+            }
         });
     }
 
