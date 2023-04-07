@@ -1,0 +1,18 @@
+[package]
+name = "monkeys"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+num_cpus = "1.15.0"
+rand = "0.8.5"
+
+[[bin]]
+name = "researcher"
+path = "src/researcher.rs"
+
+[[bin]]
+name = "monkeys"
+path = "src/monkeys.rs"
